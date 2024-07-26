@@ -3,10 +3,15 @@
 }
 
 body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: grey;
 }
+
 
 h1 {
   margin-top: 0;
@@ -84,14 +89,58 @@ body {
 }
 .game {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   min-height: 100vh;
+  align-items: center;
+  margin-right: 45px;
+  margin-top: 250px;
 }
 
 .board {
   display: inline-block;
 }
 
-.game-info {
-  margin-left: 20px;
+.game-info ol {
+  padding: 0;
+  list-style-type: none;
+}
+
+.game-info li {
+  margin-bottom: 10px;
+}
+
+.game-heading {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.square.winning {
+  background: yellow;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f4f4f4;
+  background-image: url('space.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.left-sidebar {
+  margin-right: 70px;
+}
+
+.right-sidebar {
+  margin-left: 35px;
 }
