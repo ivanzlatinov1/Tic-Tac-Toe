@@ -10,6 +10,8 @@ body {
   align-items: center;
   min-height: 100vh;
   background-color: grey;
+  background-image: url(chill.jpg);
+  background-repeat: no-repeat;
 }
 
 
@@ -86,11 +88,13 @@ body {
 .status {
   margin-bottom: 10px;
   margin-left: 20px;
+  font-weight: bold;
 }
+
 .game {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 30vh;
   align-items: center;
   margin-right: 45px;
   margin-top: 250px;
@@ -98,6 +102,10 @@ body {
 
 .board {
   display: inline-block;
+}
+
+.game-info {
+margin-bottom: 85px;
 }
 
 .game-info ol {
@@ -123,19 +131,47 @@ body {
   display: flex;
   width: 100%;
   max-width: 1200px;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative; 
+  flex-direction: row;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-image {
+  max-width: 100px;
+  height: auto;
 }
 
 .sidebar {
   width: 200px;
-  background-color: #f4f4f4;
+  height: 600px;
+  background-color: rgba(255, 255, 255, 0.7);
   background-image: url('space.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  margin-top: 120px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
   color: white;
+  margin-right: 40px;
+  margin-bottom: 180px;
+  text-align: center;
 }
+
+.sidebar-image {
+  display: block;
+  height: auto;
+  margin: 50px auto 20px auto;
+}
+
 
 .left-sidebar {
   margin-right: 70px;
@@ -143,4 +179,46 @@ body {
 
 .right-sidebar {
   margin-left: 35px;
+  width: 220px;
+  align-content: center;
+  align-items: center;
+}
+
+.desc-button {
+  width: 180px;
+  height: 40px;
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(145deg, #49075b, #c814b9);
+  border: 2px solid #0f1011;
+  border-radius: 8px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px -4px 10px rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.desc-button:hover {
+  background: linear-gradient(145deg, #1e445d, #010b12);
+  border-color: #840ea8;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3), -8px -8px 15px rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.desc-button:active {
+  background: linear-gradient(145deg, #1f618d, #2980b9);
+  border-color: #1f618d;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+}
+
+.board-row {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  width: auto;
 }
